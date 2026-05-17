@@ -1,0 +1,114 @@
+/*
+  Melhorias leves (apenas CSS) para deixar o site mais bonito e responsivo.
+  Objetivo: não mexer na estrutura HTML.
+*/
+
+/* ========= Acessibilidade: foco visível ========= */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 3px solid #777777;
+  outline-offset: 2px;
+}
+
+/* ========= Responsividade (celular) ========= */
+@media (max-width: 768px) {
+  /* Título e subtítulo um pouco menores */
+  #titulo_principal {
+    font-size: 24px;
+  }
+
+  .subtitulo_medidas {
+    font-size: 24px;
+    display: block;
+  }
+
+  /* Cards e imagens ocupam a tela */
+  .produtos_container {
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .produtos {
+    width: 100%;
+    max-width: 420px;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .produtos img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Layout do rodapé/caixa branca */
+  .logo_direita_container {
+    padding: 10px 12px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Contato */
+  .contato {
+    width: 100%;
+    max-width: 420px;
+    padding: 26px 16px;
+    box-sizing: border-box;
+  }
+
+  .email_senha {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+
+  .email_spam {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+
+  /* Tabela de medidas */
+  .tabela_medidas {
+    font-size: 26px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Navegação com menos espaçamento */
+  nav {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+/* ========= Correções visuais leves ========= */
+/* Mantém o design, mas evita comportamentos ruins em alguns navegadores */
+.botao_comprar,
+.botao_enviar {
+  line-height: 1.2;
+  border-radius: 12px;
+}
+
+/* Ajusta botões/inputs para ficarem consistentes */
+.email_senha,
+.email_spam {
+  border-radius: 10px;
+  border: none;
+}
+
+/* Ícones/imagens sem overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========= Efeito hover mais suave (cards) ========= */
+.produtos:hover {
+  transform: scale(1.02);
+}
+
