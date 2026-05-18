@@ -34,7 +34,8 @@ body{
 }
 
 .produtos{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     background-color: #ffffff;
     border-radius: 15px;
     padding: 20px;
@@ -47,17 +48,19 @@ body{
 }
 
 .produtos img{
-    width: 600px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     padding: 0px;
     background-color: #ffffff;
+    display: block;
 }
 
 .card h3{
     font-size: 16px;
     margin: 1px;
 }
+
 
 .preco {
     font-weight: bold;

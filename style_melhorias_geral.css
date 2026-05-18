@@ -70,7 +70,8 @@ img {
     gap: 6px;
   }
 
-  /* Cards: tira largura fixa e deixa ocupar a tela */
+  /* Cards: ocupa a tela no mobile e mantém limite */
+
   .produtos_container {
     gap: 16px;
     padding: 12px;
