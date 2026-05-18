@@ -1,0 +1,133 @@
+/*
+  Melhorias fáceis e “organizadas” para todas as páginas.
+  - Responsividade (telas menores)
+  - Quebra/ajuste de layout
+  - Aparência dos botões/inputs
+  - Acessibilidade (foco visível)
+
+  IMPORTANTE:
+  - Não substitui seu style.css.
+  - Serve como um “extra” para melhorar sem mexer demais.
+*/
+
+/* =========================================================
+   1) Melhorar acessibilidade (teclado)
+   ========================================================= */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #777;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   2) Ajustes visuais leves (sem complicar)
+   ========================================================= */
+/* Botões com o mesmo formato, ficam mais bonitos */
+.botao_comprar,
+.botao_enviar {
+  border-radius: 12px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover para botões */
+.botao_comprar:hover,
+.botao_enviar:hover {
+  transform: translateY(-1px);
+}
+
+/* Inputs e selects: deixa alinhado e bonito */
+.email_senha,
+.email_spam {
+  border-radius: 10px;
+  padding: 8px;
+  height: auto;
+}
+
+/* Imagens: não estourar na tela */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   3) Responsividade geral (celular)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Títulos ficam menores no celular */
+  #titulo_principal {
+    font-size: 26px;
+  }
+
+  .subtitulo_medidas {
+    font-size: 24px;
+    display: block;
+  }
+
+  /* Menu vai para linha (não fica apertado) */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* Cards: tira largura fixa e deixa ocupar a tela */
+  .produtos_container {
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .produtos {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .produtos img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Rodapé/caixa branca: fica em coluna */
+  .logo_direita_container {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  /* Contato: não estourar */
+  .contato {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+
+  .email_senha,
+  .email_spam {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tabela: rolagem horizontal se precisar */
+  .tabela_medidas {
+    font-size: 26px;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+/* =========================================================
+   4) “Organizar” o espaçamento em telas pequenas
+   ========================================================= */
+@media (max-width: 420px) {
+  .produtos {
+    padding: 14px;
+  }
+
+  nav a {
+    padding: 8px;
+  }
+}
+
